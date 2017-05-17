@@ -1094,6 +1094,135 @@ The `sprites` mixin generates identical output to the CSS template
   margin-top: 0;
   text-align: left; }
 
+/*DROPDOWN*/
+.dropdown {
+  max-width: 540px;
+  font: normal 18px/22px 'ProximaNova';
+  color: #3f474f;
+  position: relative; }
+
+.calculator .dropdown .drop_face, .dropdown-std .drop_face {
+  height: 50px;
+  position: relative;
+  padding: 14px 30px;
+  background-color: #eff7f8;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.calculator.ver2 .dropdown .drop_face, .dropdown-std2 .drop_face {
+  height: 60px;
+  padding: 19px 40px 19px 30px; }
+
+.is-open .drop_face {
+  padding: 13px 29px;
+  border: 1px solid #238900; }
+
+.calculator.ver2 .is-open .drop_face, .dropdown-std2 .is-open .drop_face {
+  padding: 18px 39px 18px 29px; }
+
+.dropdown .drop_layout {
+  display: none;
+  min-width: 100%;
+  max-height: 320px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  background-color: #eff7f8;
+  border: 1px solid #238900;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100; }
+
+.dropdown .drop_layout section {
+  white-space: nowrap;
+  height: 50px;
+  padding: 14px 30px;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+.dropdown .drop_layout section.active {
+  background-color: #0e9800;
+  color: #fff;
+  position: relative; }
+
+.dropdown .drop_layout section.active:after {
+  width: 12px;
+  height: 10px;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -5px;
+  background: url(../img/sprite.png) -38px -432px no-repeat; }
+
+.dropdown .drop_layout section:hover {
+  background-color: #cfe2e6;
+  transition: background-color 0.4s ease; }
+
+.dropdown .drop_layout section.active:hover {
+  background-color: #0e9800;
+  color: #fff;
+  transition: background-color color 0.4s ease; }
+
+.dropdown .drop_layout section:last-child {
+  border-radius: 0 0 5px 5px; }
+
+.drop_arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  right: 20px;
+  display: block;
+  width: 12px;
+  height: 28px;
+  background: url(../img/sprite.png) -7px -423px no-repeat; }
+
+.is-open .drop_arrow {
+  background-position: -22px -423px; }
+
+/*RADIO*/
+.radio, .checkbox {
+  display: block;
+  float: left;
+  position: relative;
+  width: 28px;
+  height: 26px; }
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+  visibility: hidden; }
+
+.radio input[type="radio"] + span, .checkbox input[type="checkbox"] + span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url(../img/sprite.png) -9px -191px no-repeat #fff;
+  cursor: pointer; }
+
+.checkbox input[type="checkbox"] + span {
+  border-radius: 0;
+  background-position: -9px -284px; }
+
+.checkbox:hover input[type="checkbox"] + span {
+  background-position: -9px -316px; }
+
+.checkbox input[type="checkbox"]:checked + span {
+  background-position: -9px -347px; }
+
+.radio:hover input[type="radio"] + span {
+  background-position: -9px -222px; }
+
+.radio input[type="radio"]:checked + span {
+  background-position: -9px -253px; }
+
 .pif__title {
   display: block;
   font-family: "ProximaNova", sans-serif;
@@ -1768,7 +1897,6 @@ The `sprites` mixin generates identical output to the CSS template
       background-color: #0e9800;
       color: #fff;
       text-align: center;
-      padding-top: 1px;
       font-family: "ProximaNova", sans-serif;
       font-weight: 700;
       font-size: 17px;
@@ -1794,5 +1922,301 @@ The `sprites` mixin generates identical output to the CSS template
       left: -15px; }
     .pif1-invest__subtext:not(:last-child) {
       margin-bottom: 20px; }
+
+.pif2-choose-pif {
+  padding-top: 61px; }
+  .pif2-choose-pif__title {
+    margin-bottom: 21px;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1px; }
+  .pif2-choose-pif__text {
+    display: block;
+    font-family: "ProximaNova", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: #8a9199;
+    letter-spacing: -.5px;
+    text-align: center;
+    margin-bottom: 66px; }
+  .pif2-choose-pif__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 32px;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ced5d9;
+    padding-bottom: 55px; }
+  .pif2-choose-pif__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .pif2-choose-pif__item.radios {
+      margin-left: 49px;
+      margin-right: 46px; }
+    .pif2-choose-pif__item__title {
+      position: relative;
+      display: inline-block;
+      font-family: "ProximaNova", sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      color: #363a45;
+      font-weight: 700;
+      letter-spacing: -.2px;
+      margin-bottom: 15px; }
+      .pif2-choose-pif__item__title i {
+        position: absolute;
+        right: -36px;
+        top: -2px;
+        width: 23px;
+        height: 22px;
+        background: url("../img/pngsprite/ico-ques.png") no-repeat center; }
+      .pif2-choose-pif__item__title.radios {
+        margin-bottom: 33px; }
+    .pif2-choose-pif__item__radios {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-align: center;
+      align-items: center; }
+      .pif2-choose-pif__item__radios .radio {
+        margin-right: 9px; }
+      .pif2-choose-pif__item__radios label {
+        font-family: "ProximaNova", sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000; }
+      .pif2-choose-pif__item__radios__item {
+        margin-left: 23px; }
+  .pif2-choose-pif__block2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 70px; }
+    .pif2-choose-pif__block2__item {
+      width: 49%; }
+    .pif2-choose-pif__block2__title {
+      display: block;
+      font-family: "ProximaNova", sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      color: #363a45;
+      font-weight: 700;
+      letter-spacing: -.2px;
+      margin-bottom: 15px; }
+    .pif2-choose-pif__block2__reset {
+      position: relative;
+      display: inline-block;
+      font-family: "ProximaNova", sans-serif;
+      font-size: 15px;
+      line-height: 19px;
+      font-weight: 700;
+      color: #363a45;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-top: 35px;
+      background-color: #fff;
+      padding-left: 0;
+      padding-right: 0; }
+      .pif2-choose-pif__block2__reset:hover:after {
+        opacity: 0; }
+      .pif2-choose-pif__block2__reset:after {
+        position: absolute;
+        opacity: 1;
+        content: '';
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #363a45;
+        left: 0;
+        bottom: 3px;
+        transition: all 0.1s linear; }
+
+.pif2__table {
+  margin-bottom: 23px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .pif2__table__row {
+    border-bottom: 1px solid #ced5d9;
+    height: 85px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center; }
+    .pif2__table__row:hover .pif2__table__row--1 {
+      color: #0e9800; }
+    .pif2__table__row span {
+      position: relative;
+      display: inline-block; }
+    .pif2__table__row--1 {
+      width: 465px;
+      font-family: "ProximaNova", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #000;
+      letter-spacing: -.3px;
+      transition: all 0.3s linear; }
+      .pif2__table__row--1 .subname {
+        position: absolute;
+        text-transform: uppercase;
+        color: #9ca8b4;
+        font-size: 11px;
+        line-height: 25px;
+        top: -16px;
+        left: 2px; }
+      .pif2__table__row--1 .subtext {
+        font-weight: 400;
+        color: #8a9199;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 16px; }
+    .pif2__table__row--2 {
+      width: 71px; }
+    .pif2__table__row--3 {
+      text-align: right;
+      width: 131px; }
+    .pif2__table__row--4 {
+      text-align: right;
+      width: 172px; }
+    .pif2__table__row--5 {
+      width: 185px; }
+    .pif2__table__row--circle:after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      display: inline-block;
+      left: 12px;
+      top: -5px; }
+    .pif2__table__row--green:after {
+      background-color: #73c343; }
+    .pif2__table__row--orange:after {
+      background-color: #ffb515; }
+    .pif2__table__row--red:after {
+      background-color: #eb4b4b; }
+    .pif2__table__row--percent {
+      text-align: right;
+      font-family: "ProximaNova", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -.4px;
+      color: #369a1e; }
+      .pif2__table__row--percent--red {
+        color: #eb4b4b; }
+    .pif2__table__row--price {
+      font-family: "ProximaNova", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      margin-right: 5px;
+      letter-spacing: -.4px;
+      color: #72818f; }
+    .pif2__table__row--btn {
+      float: right;
+      text-align: right; }
+      .pif2__table__row--btn a {
+        margin-left: 45px;
+        display: inline-block;
+        padding: 14px 23px; }
+    .pif2__table__row--name {
+      height: auto;
+      padding-bottom: 15px; }
+      .pif2__table__row--name span {
+        font-family: "ProximaNova", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -.4px; }
+  .pif2__table__btns {
+    margin-bottom: 75px; }
+    .pif2__table__btns--1 {
+      padding: 14px 28px;
+      margin-right: 20px; }
+    .pif2__table__btns--2 {
+      padding: 14px 16px; }
+
+.pif2__table2 {
+  padding-bottom: 110px; }
+  .pif2__table2__name {
+    margin-top: 20px; }
+  .pif2__table2 .pif2__table__row {
+    height: 154px;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .pif2__table2 .pif2__table__row--name {
+      height: auto;
+      padding-top: 0; }
+      .pif2__table2 .pif2__table__row--name .pif2__table__row--3 {
+        margin-top: 0;
+        width: 120px; }
+      .pif2__table2 .pif2__table__row--name .pif2__table__row--4 {
+        width: 160px;
+        margin-top: 0; }
+  .pif2__table2 .pif2__table__row--3 {
+    width: 160px;
+    margin-top: 65px; }
+  .pif2__table2 .pif2__table__row--4 {
+    width: 120px;
+    margin-top: 65px; }
+  .pif2__table2__item {
+    width: 565px; }
+    .pif2__table2__item .pif2__table__row--1 {
+      width: auto; }
+    .pif2__table2__item--subitem {
+      margin-top: 36px; }
+  .pif2__table2 .pif2__table__row--btn {
+    margin-top: 51px; }
+
+.pif2-select-1 {
+  width: 250px; }
+  .pif2-select-1 .drop_face {
+    height: 60px;
+    padding: 19px 22px; }
+
+.pif2-select-2 {
+  width: 430px; }
+  .pif2-select-2 .drop_face {
+    height: 60px;
+    padding: 19px 22px; }
+  .pif2-select-2 .selected {
+    position: relative; }
+  .pif2-select-2 section span {
+    position: relative; }
+  .pif2-select-2 .riski {
+    position: absolute;
+    right: -27px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%; }
+    .pif2-select-2 .riski--1 {
+      background-color: #0e9800; }
+    .pif2-select-2 .riski--2 {
+      background-color: #ffb515; }
+    .pif2-select-2 .riski--3 {
+      background-color: #eb4b4b; }
 
 /*# sourceMappingURL=style.css.map */

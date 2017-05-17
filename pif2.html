@@ -10,7 +10,81 @@
   </head>
   <div class="page-wrapper" id="page-wrapper">
     <div class="page-body" id="page-body">
-      <div class="pif2"></div>
+      <div class="pif2-choose-pif">
+        <div class="container"><span class="pif__title pif2-choose-pif__title">Выбор ПИФ</span><span class="pif2-choose-pif__text">Здесь вы можете выбрать один или несколько ПИФов, используя фильтры и комбинируя параметры.<br>Вы также сможете сравнить доходность ПИФов за интересующий вас период, используя<br>калькулятор доходности, который показывает доходность ПИФов за прошлые периоды.</span>
+          <div class="pif2-choose-pif__wrapper">
+            <div class="pif2-choose-pif__item">
+              <div class="pif2-choose-pif__item__title">ПИФ инвестирует в</div>
+              <div class="dropdown dropdown-std pif2-select-1">
+                <div class="drop_face">Облигации<span class="drop_arrow"></span></div>
+                <div class="drop_layout">
+                  <section data-value="1" data-invest-value="0">Облигации-1</section>
+                  <section data-value="2" data-invest-value="2">Облигации-2</section>
+                  <section class="active" data-value="3" data-invest-value="4">Облигации-3</section>
+                  <section data-value="5" data-invest-value="6">Облигации-4</section>
+                </div>
+                <input type="hidden" value="3" name="form_dropdown_QUESTION_1" data-invest-value="4">
+              </div>
+            </div>
+            <div class="pif2-choose-pif__item radios">
+              <div class="pif2-choose-pif__item__title radios">Валюта активов</div>
+              <div class="pif2-choose-pif__item__radios">
+                <div>
+                  <label class="radio">
+                    <input class="jqTransformHidden" id="valuta1" type="radio" name="valuta" value="3m" checked><span></span>
+                  </label>
+                  <label for="valuta1">Рубль</label>
+                </div>
+                <div class="pif2-choose-pif__item__radios__item">
+                  <label class="radio">
+                    <input class="jqTransformHidden" id="valuta2" type="radio" name="valuta" value="3m"><span></span>
+                  </label>
+                  <label for="valuta2">Доллар США</label>
+                </div>
+              </div>
+            </div>
+            <div class="pif2-choose-pif__item">
+              <div class="pif2-choose-pif__item__title">Риск / Доход<i></i></div>
+              <div class="dropdown dropdown-std pif2-select-2">
+                <div class="drop_face"><span class="selected">Низкий риск, умеренный доход<span class="riski riski--1"></span></span><span class="drop_arrow"></span></div>
+                <div class="drop_layout">
+                  <section class="active" data-value="1" data-invest-value="0"><span>Низкий риск, умеренный доход<span class="riski riski--1"></span></span></section>
+                  <section data-value="2" data-invest-value="2"><span>Низкий риск, умеренный доход<span class="riski riski--2"></span></span></section>
+                  <section data-value="3" data-invest-value="3"><span>Низкий риск, умеренный доход<span class="riski riski--3"></span></span></section>
+                </div>
+                <input type="hidden" value="3" name="form_dropdown_QUESTION_1" data-invest-value="4">
+              </div>
+            </div>
+          </div>
+          <form class="pif2-choose-pif__block2">
+            <div class="pif2-choose-pif__block2__item">
+              <div class="pif2-choose-pif__block2__title">Сумма инвестиций</div><img src="img/img-range-1.jpg">
+            </div>
+            <div class="pif2-choose-pif__block2__item">
+              <div class="pif2-choose-pif__block2__title">Срок инвестиций</div><img src="img/img-range-2.jpg">
+            </div>
+            <button class="pif2-choose-pif__block2__reset" type="reset">Сбросить настройки</button>
+          </form>
+          <div class="pif2__table">
+            <div class="pif2__table__row pif2__table__row--name"><span class="pif2__table__row--1">Название фонда</span><span class="pif2__table__row--2">Риск</span><span class="pif2__table__row--3">Динамика за 2 года</span><span class="pif2__table__row--4">Результат за 2 года</span><span class="pif2__table__row--5"></span></div>
+            <div class="pif2__table__row"><span class="pif2__table__row--1">Электроэнергетика<span class="subname">Акции</span></span><span class="pif2__table__row--2 pif2__table__row--circle pif2__table__row--green"></span><span class="pif2__table__row--3 pif2__table__row--percent">+13,45%</span><span class="pif2__table__row--4 pif2__table__row--price">1 974 000</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Купить паи</a></span></div>
+            <div class="pif2__table__row"><span class="pif2__table__row--1">Природные ресурсы<span class="subname">облигации</span></span><span class="pif2__table__row--2 pif2__table__row--circle pif2__table__row--orange"></span><span class="pif2__table__row--3 pif2__table__row--percent">+12,64%</span><span class="pif2__table__row--4 pif2__table__row--price">1 959 000</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Купить паи</a></span></div>
+            <div class="pif2__table__row"><span class="pif2__table__row--1">Финансовый сектор<span class="subname">облигации</span></span><span class="pif2__table__row--2 pif2__table__row--circle pif2__table__row--red"></span><span class="pif2__table__row--3 pif2__table__row--percent pif2__table__row--percent--red">-13,45%</span><span class="pif2__table__row--4 pif2__table__row--price">1 521 000</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Купить паи</a></span></div>
+            <div class="pif2__table__row"><span class="pif2__table__row--1">Фонд акций «Добрыня Никитич»<span class="subname">недвижимость</span></span><span class="pif2__table__row--2 pif2__table__row--circle pif2__table__row--orange"></span><span class="pif2__table__row--3 pif2__table__row--percent">+12,64%</span><span class="pif2__table__row--4 pif2__table__row--price">1 959 000</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Купить паи</a></span></div>
+            <div class="pif2__table__row"><span class="pif2__table__row--1">Фонд акций «Илья Муромец»<span class="subname">недвижимость</span></span><span class="pif2__table__row--2 pif2__table__row--circle pif2__table__row--red"></span><span class="pif2__table__row--3 pif2__table__row--percent">+12,64%</span><span class="pif2__table__row--4 pif2__table__row--price">1 959 000</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Купить паи</a></span></div>
+          </div>
+          <div class="pif2__table__btns"><a class="pif-btn pif2__table__btns--1" href="#">Показать все</a><a class="pif-btn-white pif2__table__btns--2" href="#">Сравнить доходность ПИФ</a></div>
+          <div class="pif2__table pif2__table2">
+            <div class="pif2__table__row pif2__table__row--name"><span class="pif2__table__row--1 pif2__table2__name pif2__table2__item">Советуем посмотреть другие продукты:</span><span class="pif2__table__row--3">Минимальный<br>взнос</span><span class="pif2__table__row--4">Динамика<br>за 2 года</span><span class="pif2__table__row--5"></span></div>
+            <div class="pif2__table__row">
+              <div class="pif2__table2__item pif2__table2__item--subitem"><span class="pif2__table__row--1">Индивидуальный инвестиционный счет<span class="subname">облигации</span><span class="subtext">ИИС — ежегодные вложения от 100 до 400 тыс. руб. с возможностью доп. взноса от 50 тыс. руб. с доходностью до 13% годовых в рублях.</span></span></div><span class="pif2__table__row--4 pif2__table__row--price">100 000</span><span class="pif2__table__row--3 pif2__table__row--percent">+13,45%</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Подробнее</a></span>
+            </div>
+            <div class="pif2__table__row">
+              <div class="pif2__table2__item pif2__table2__item--subitem"><span class="pif2__table__row--1">Доверительное управление<span class="subname">ценные бумаги</span><span class="subtext">Доверительное управление – услуга, предоставляемая Сбербанк Управление Активами на рынке ценных бумаг.</span></span></div><span class="pif2__table__row--4 pif2__table__row--price">100 000</span><span class="pif2__table__row--3 pif2__table__row--percent">+12,64%</span><span class="pif2__table__row--5 pif2__table__row--btn"><a class="pif-btn-white" href="#">Подробнее</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/libs.js"></script>

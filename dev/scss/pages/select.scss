@@ -1,0 +1,127 @@
+/*DROPDOWN*/
+.dropdown { max-width: 540px;
+  font: normal 18px/22px 'ProximaNova';
+  color: #3f474f;
+  position: relative;
+}
+
+.calculator .dropdown .drop_face, .dropdown-std .drop_face {
+  height: 50px;
+  position: relative;
+  padding: 14px 30px;
+  background-color: #eff7f8;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.calculator.ver2 .dropdown .drop_face, .dropdown-std2 .drop_face { height: 60px; padding: 19px 40px 19px 30px; }
+.is-open .drop_face { padding: 13px 29px; border: 1px solid #238900; }
+.calculator.ver2 .is-open .drop_face, .dropdown-std2 .is-open .drop_face { padding: 18px 39px 18px 29px; }
+
+.dropdown .drop_layout {
+  display: none;
+  min-width: 100%;
+  max-height: 320px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0; top: 70px;
+  background-color: #eff7f8; border: 1px solid #238900; box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  z-index: 100;
+}
+
+.dropdown .drop_layout section { white-space: nowrap;
+  height: 50px;
+  padding: 14px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.dropdown .drop_layout section.active {
+  background-color: #0e9800;
+  color: #fff;
+  position: relative;
+}
+
+.dropdown .drop_layout section.active:after {
+  width: 12px; height: 10px;
+  display: block; content: '';
+  position: absolute;
+  top: 50%; right: 10px; margin-top: -5px;
+  background: url(../img/sprite.png) -38px -432px no-repeat;
+}
+
+.dropdown .drop_layout section:hover {
+  background-color: #cfe2e6;
+  -webkit-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.dropdown .drop_layout section.active:hover {
+  background-color: #0e9800;
+  color: #fff;
+  -webkit-transition: background-color color 0.4s ease;
+  -o-transition: background-color color 0.4s ease;
+  transition: background-color color 0.4s ease;
+}
+.dropdown .drop_layout section:last-child { border-radius: 0 0 5px 5px; }
+
+.drop_arrow { position: absolute; top: 50%; margin-top: -14px; right: 20px;
+  display: block;
+  width: 12px; height: 28px;
+  background: url(../img/sprite.png) -7px -423px no-repeat;
+}
+
+.is-open .drop_arrow {
+  background-position: -22px -423px;
+}
+
+
+/*RADIO*/
+
+.radio, .checkbox {
+  display: block; float: left;
+  position: relative;
+
+  width: 28px; height: 26px;
+}
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.radio input[type="radio"] + span, .checkbox input[type="checkbox"] + span {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url(../img/sprite.png) -9px -191px no-repeat #fff;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] + span {
+  border-radius: 0;
+  background-position: -9px -284px;
+}
+
+.checkbox:hover input[type="checkbox"] + span {
+  background-position: -9px -316px;
+}
+
+.checkbox input[type="checkbox"]:checked + span {
+  background-position: -9px -347px;
+}
+
+.radio:hover input[type="radio"] + span {
+  background-position: -9px -222px;
+}
+
+.radio input[type="radio"]:checked + span {
+  background-position: -9px -253px;
+}

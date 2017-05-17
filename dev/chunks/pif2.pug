@@ -1,1 +1,155 @@
-.pif2
+.pif2-choose-pif
+    .container
+        span.pif__title.pif2-choose-pif__title Выбор ПИФ
+        span.pif2-choose-pif__text
+            | Здесь вы можете выбрать один или несколько ПИФов, используя фильтры и комбинируя параметры.
+            br
+            | Вы также сможете сравнить доходность ПИФов за интересующий вас период, используя
+            br
+            | калькулятор доходности, который показывает доходность ПИФов за прошлые периоды.
+        .pif2-choose-pif__wrapper
+
+            .pif2-choose-pif__item
+                .pif2-choose-pif__item__title ПИФ инвестирует в
+                .dropdown.dropdown-std.pif2-select-1
+                    .drop_face
+                        | Облигации
+                        span.drop_arrow
+                    .drop_layout
+                            section(data-value='1', data-invest-value='0') Облигации-1
+                            section(data-value='2', data-invest-value='2') Облигации-2
+                            section.active(data-value='3', data-invest-value='4') Облигации-3
+                            section(data-value='5', data-invest-value='6') Облигации-4
+                    input(type='hidden', value='3', name='form_dropdown_QUESTION_1', data-invest-value='4')
+            .pif2-choose-pif__item.radios
+                .pif2-choose-pif__item__title.radios Валюта активов
+                .pif2-choose-pif__item__radios
+                    div
+                        label.radio
+                            input#valuta1.jqTransformHidden(type='radio', name='valuta', value='3m', checked)
+                            span
+                        label(for='valuta1') Рубль
+                    div.pif2-choose-pif__item__radios__item
+                        label.radio
+                            input#valuta2.jqTransformHidden(type='radio', name='valuta', value='3m')
+                            span
+                        label(for='valuta2') Доллар США
+
+            .pif2-choose-pif__item
+                .pif2-choose-pif__item__title Риск / Доход
+                    i
+                .dropdown.dropdown-std.pif2-select-2
+                    .drop_face
+                        span.selected Низкий риск, умеренный доход
+                            span.riski.riski--1
+                        span.drop_arrow
+                    .drop_layout
+                        section.active(data-value='1', data-invest-value='0')
+                            span Низкий риск, умеренный доход
+                                span.riski.riski--1
+                        section(data-value='2', data-invest-value='2')
+                            span Низкий риск, умеренный доход
+                                span.riski.riski--2
+                        section(data-value='3', data-invest-value='3')
+                            span Низкий риск, умеренный доход
+                                span.riski.riski--3
+                    input(type='hidden', value='3', name='form_dropdown_QUESTION_1', data-invest-value='4')
+
+        form.pif2-choose-pif__block2
+            .pif2-choose-pif__block2__item
+                .pif2-choose-pif__block2__title Сумма инвестиций
+                img(src="img/img-range-1.jpg")
+            .pif2-choose-pif__block2__item
+                .pif2-choose-pif__block2__title Срок инвестиций
+                img(src="img/img-range-2.jpg")
+            button(type="reset").pif2-choose-pif__block2__reset Сбросить настройки
+        .pif2__table
+            .pif2__table__row.pif2__table__row--name
+                span.pif2__table__row--1 Название фонда
+                span.pif2__table__row--2 Риск
+                span.pif2__table__row--3 Динамика за 2 года
+                span.pif2__table__row--4 Результат за 2 года
+                span.pif2__table__row--5
+            .pif2__table__row
+                span.pif2__table__row--1 Электроэнергетика
+                    span.subname Акции
+                span.pif2__table__row--2.pif2__table__row--circle.pif2__table__row--green
+                span.pif2__table__row--3.pif2__table__row--percent +13,45%
+                span.pif2__table__row--4.pif2__table__row--price 1 974 000
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Купить паи
+            .pif2__table__row
+                span.pif2__table__row--1 Природные ресурсы
+                    span.subname облигации
+                span.pif2__table__row--2.pif2__table__row--circle.pif2__table__row--orange
+                span.pif2__table__row--3.pif2__table__row--percent +12,64%
+                span.pif2__table__row--4.pif2__table__row--price 1 959 000
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Купить паи
+            .pif2__table__row
+                span.pif2__table__row--1 Финансовый сектор
+                    span.subname облигации
+                span.pif2__table__row--2.pif2__table__row--circle.pif2__table__row--red
+                span.pif2__table__row--3.pif2__table__row--percent.pif2__table__row--percent--red -13,45%
+                span.pif2__table__row--4.pif2__table__row--price 1 521 000
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Купить паи
+            .pif2__table__row
+                span.pif2__table__row--1 Фонд акций «Добрыня Никитич»
+                    span.subname недвижимость
+                span.pif2__table__row--2.pif2__table__row--circle.pif2__table__row--orange
+                span.pif2__table__row--3.pif2__table__row--percent +12,64%
+                span.pif2__table__row--4.pif2__table__row--price 1 959 000
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Купить паи
+
+            .pif2__table__row
+                span.pif2__table__row--1 Фонд акций «Илья Муромец»
+                    span.subname недвижимость
+                span.pif2__table__row--2.pif2__table__row--circle.pif2__table__row--red
+                span.pif2__table__row--3.pif2__table__row--percent +12,64%
+                span.pif2__table__row--4.pif2__table__row--price 1 959 000
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Купить паи
+
+        .pif2__table__btns
+            a(href="#").pif-btn.pif2__table__btns--1 Показать все
+            a(href="#").pif-btn-white.pif2__table__btns--2 Сравнить доходность ПИФ
+
+
+        .pif2__table.pif2__table2
+            .pif2__table__row.pif2__table__row--name
+                span.pif2__table__row--1.pif2__table2__name.pif2__table2__item Советуем посмотреть другие продукты:
+                span.pif2__table__row--3
+                    | Минимальный
+                    br
+                    | взнос
+                span.pif2__table__row--4
+                    | Динамика
+                    br
+                    | за 2 года
+                span.pif2__table__row--5
+            .pif2__table__row
+                div.pif2__table2__item.pif2__table2__item--subitem
+                    span.pif2__table__row--1 Индивидуальный инвестиционный счет
+                        span.subname облигации
+                        span.subtext ИИС — ежегодные вложения от 100 до 400 тыс. руб. с возможностью доп. взноса от 50 тыс. руб. с доходностью до 13% годовых в рублях.
+                span.pif2__table__row--4.pif2__table__row--price 100 000
+                span.pif2__table__row--3.pif2__table__row--percent +13,45%
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Подробнее
+            .pif2__table__row
+                div.pif2__table2__item.pif2__table2__item--subitem
+                    span.pif2__table__row--1 Доверительное управление
+                        span.subname ценные бумаги
+                        span.subtext Доверительное управление – услуга, предоставляемая Сбербанк Управление Активами на рынке ценных бумаг.
+                span.pif2__table__row--4.pif2__table__row--price 100 000
+                span.pif2__table__row--3.pif2__table__row--percent +12,64%
+                span.pif2__table__row--5.pif2__table__row--btn
+                    a(href="#").pif-btn-white Подробнее
+
+
+
+
+
+
