@@ -2219,4 +2219,20 @@ The `sprites` mixin generates identical output to the CSS template
     .pif2-select-2 .riski--3 {
       background-color: #eb4b4b; }
 
+.pif3 {
+  padding-top: 61px; }
+  .pif3__data-date {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -.4px;
+    color: #353943; }
+    .pif3__data-date span {
+      font-weight: 700;
+      text-decoration: underline; }
+
 /*# sourceMappingURL=style.css.map */
