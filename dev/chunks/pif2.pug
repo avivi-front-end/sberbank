@@ -7,62 +7,73 @@
             | Вы также сможете сравнить доходность ПИФов за интересующий вас период, используя
             br
             | калькулятор доходности, который показывает доходность ПИФов за прошлые периоды.
-        .pif2-choose-pif__wrapper
+        form#pif2-form
+            .pif2-choose-pif__wrapper
 
-            .pif2-choose-pif__item
-                .pif2-choose-pif__item__title ПИФ инвестирует в
-                .dropdown.dropdown-std.pif2-select-1
-                    .drop_face
-                        | Облигации
-                        span.drop_arrow
-                    .drop_layout
-                            section(data-value='1', data-invest-value='0') Облигации-1
-                            section(data-value='2', data-invest-value='2') Облигации-2
-                            section.active(data-value='3', data-invest-value='4') Облигации-3
-                            section(data-value='5', data-invest-value='6') Облигации-4
-                    input(type='hidden', value='3', name='form_dropdown_QUESTION_1', data-invest-value='4')
-            .pif2-choose-pif__item.radios
-                .pif2-choose-pif__item__title.radios Валюта активов
-                .pif2-choose-pif__item__radios
-                    div
-                        label.radio
-                            input#valuta1.jqTransformHidden(type='radio', name='valuta', value='3m', checked)
-                            span
-                        label(for='valuta1') Рубль
-                    div.pif2-choose-pif__item__radios__item
-                        label.radio
-                            input#valuta2.jqTransformHidden(type='radio', name='valuta', value='3m')
-                            span
-                        label(for='valuta2') Доллар США
+                .pif2-choose-pif__item
+                    .pif2-choose-pif__item__title ПИФ инвестирует в
+                    .dropdown.dropdown-std.pif2-select-1
+                        .drop_face
+                            | Облигации
+                            span.drop_arrow
+                        .drop_layout
+                                section(data-value='1', data-invest-value='0') Облигации-1
+                                section(data-value='2', data-invest-value='2') Облигации-2
+                                section.active(data-value='3', data-invest-value='4') Облигации-3
+                                section(data-value='5', data-invest-value='6') Облигации-4
+                        input(type='hidden', value='3', name='form_dropdown_QUESTION_1', data-invest-value='4')
+                .pif2-choose-pif__item.radios
+                    .pif2-choose-pif__item__title.radios Валюта активов
+                    .pif2-choose-pif__item__radios
+                        div
+                            label.radio
+                                input#valuta1.jqTransformHidden(type='radio', name='valuta', value='3m', checked)
+                                span
+                            label(for='valuta1') Рубль
+                        div.pif2-choose-pif__item__radios__item
+                            label.radio
+                                input#valuta2.jqTransformHidden(type='radio', name='valuta', value='3m')
+                                span
+                            label(for='valuta2') Доллар США
 
-            .pif2-choose-pif__item
-                .pif2-choose-pif__item__title Риск / Доход
-                    i
-                .dropdown.dropdown-std.pif2-select-2
-                    .drop_face
-                        span.selected Низкий риск, умеренный доход
-                            span.riski.riski--1
-                        span.drop_arrow
-                    .drop_layout
-                        section.active(data-value='1', data-invest-value='0')
-                            span Низкий риск, умеренный доход
+                .pif2-choose-pif__item
+                    .pif2-choose-pif__item__title Риск / Доход
+                        i
+                    .dropdown.dropdown-std.pif2-select-2
+                        .drop_face
+                            span.selected Низкий риск, умеренный доход
                                 span.riski.riski--1
-                        section(data-value='2', data-invest-value='2')
-                            span Низкий риск, умеренный доход
-                                span.riski.riski--2
-                        section(data-value='3', data-invest-value='3')
-                            span Низкий риск, умеренный доход
-                                span.riski.riski--3
-                    input(type='hidden', value='3', name='form_dropdown_QUESTION_1', data-invest-value='4')
+                            span.drop_arrow
+                        .drop_layout
+                            section.active(data-value='1', data-invest-value='0')
+                                span Низкий риск, умеренный доход
+                                    span.riski.riski--1
+                            section(data-value='2', data-invest-value='2')
+                                span Низкий риск, умеренный доход
+                                    span.riski.riski--2
+                            section(data-value='3', data-invest-value='3')
+                                span Низкий риск, умеренный доход
+                                    span.riski.riski--3
+                        input(type='hidden', value='3', name='form_dropdown_QUESTION_1', data-invest-value='4')
 
-        form.pif2-choose-pif__block2
-            .pif2-choose-pif__block2__item
-                .pif2-choose-pif__block2__title Сумма инвестиций
-                img(src="img/img-range-1.jpg")
-            .pif2-choose-pif__block2__item
-                .pif2-choose-pif__block2__title Срок инвестиций
-                img(src="img/img-range-2.jpg")
-            button(type="reset").pif2-choose-pif__block2__reset Сбросить настройки
+            .pif2-choose-pif__block2
+                .pif2-choose-pif__block2__item
+                    .pif2-choose-pif__block2__title Сумма инвестиций
+                    input(type="text").pif2-range1.pif2__range.input-number#pif2-range1
+                    .js-pif2-range1.pif2__range1
+                .pif2-choose-pif__block2__item
+                    .pif2-choose-pif__block2__title Срок инвестиций
+                    div.flex.wrapper-years
+                        .js-pif2-range2.pif2__range2
+                            span.pif2__range2--1.active 1 год
+                            span.pif2__range2--2 2 года
+                            span.pif2__range2--3
+                            span.pif2__range2--4
+                            span.pif2__range2--5 5 лет
+                        .pif2-range2.pif2__range.flex
+                            input(type="text").input-number#pif2-range2
+                            span.pif2-range2__text года
+                button(type="reset").pif2-choose-pif__block2__reset.js-pif2-reset Сбросить настройки
         .pif2__table
             .pif2__table__row.pif2__table__row--name
                 span.pif2__table__row--1 Название фонда

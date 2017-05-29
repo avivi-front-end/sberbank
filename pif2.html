@@ -12,58 +12,68 @@
     <div class="page-body" id="page-body">
       <div class="pif2-choose-pif">
         <div class="container"><span class="pif__title pif2-choose-pif__title">Выбор ПИФ</span><span class="pif2-choose-pif__text">Здесь вы можете выбрать один или несколько ПИФов, используя фильтры и комбинируя параметры.<br>Вы также сможете сравнить доходность ПИФов за интересующий вас период, используя<br>калькулятор доходности, который показывает доходность ПИФов за прошлые периоды.</span>
-          <div class="pif2-choose-pif__wrapper">
-            <div class="pif2-choose-pif__item">
-              <div class="pif2-choose-pif__item__title">ПИФ инвестирует в</div>
-              <div class="dropdown dropdown-std pif2-select-1">
-                <div class="drop_face">Облигации<span class="drop_arrow"></span></div>
-                <div class="drop_layout">
-                  <section data-value="1" data-invest-value="0">Облигации-1</section>
-                  <section data-value="2" data-invest-value="2">Облигации-2</section>
-                  <section class="active" data-value="3" data-invest-value="4">Облигации-3</section>
-                  <section data-value="5" data-invest-value="6">Облигации-4</section>
-                </div>
-                <input type="hidden" value="3" name="form_dropdown_QUESTION_1" data-invest-value="4">
-              </div>
-            </div>
-            <div class="pif2-choose-pif__item radios">
-              <div class="pif2-choose-pif__item__title radios">Валюта активов</div>
-              <div class="pif2-choose-pif__item__radios">
-                <div>
-                  <label class="radio">
-                    <input class="jqTransformHidden" id="valuta1" type="radio" name="valuta" value="3m" checked><span></span>
-                  </label>
-                  <label for="valuta1">Рубль</label>
-                </div>
-                <div class="pif2-choose-pif__item__radios__item">
-                  <label class="radio">
-                    <input class="jqTransformHidden" id="valuta2" type="radio" name="valuta" value="3m"><span></span>
-                  </label>
-                  <label for="valuta2">Доллар США</label>
+          <form id="pif2-form">
+            <div class="pif2-choose-pif__wrapper">
+              <div class="pif2-choose-pif__item">
+                <div class="pif2-choose-pif__item__title">ПИФ инвестирует в</div>
+                <div class="dropdown dropdown-std pif2-select-1">
+                  <div class="drop_face">Облигации<span class="drop_arrow"></span></div>
+                  <div class="drop_layout">
+                    <section data-value="1" data-invest-value="0">Облигации-1</section>
+                    <section data-value="2" data-invest-value="2">Облигации-2</section>
+                    <section class="active" data-value="3" data-invest-value="4">Облигации-3</section>
+                    <section data-value="5" data-invest-value="6">Облигации-4</section>
+                  </div>
+                  <input type="hidden" value="3" name="form_dropdown_QUESTION_1" data-invest-value="4">
                 </div>
               </div>
-            </div>
-            <div class="pif2-choose-pif__item">
-              <div class="pif2-choose-pif__item__title">Риск / Доход<i></i></div>
-              <div class="dropdown dropdown-std pif2-select-2">
-                <div class="drop_face"><span class="selected">Низкий риск, умеренный доход<span class="riski riski--1"></span></span><span class="drop_arrow"></span></div>
-                <div class="drop_layout">
-                  <section class="active" data-value="1" data-invest-value="0"><span>Низкий риск, умеренный доход<span class="riski riski--1"></span></span></section>
-                  <section data-value="2" data-invest-value="2"><span>Низкий риск, умеренный доход<span class="riski riski--2"></span></span></section>
-                  <section data-value="3" data-invest-value="3"><span>Низкий риск, умеренный доход<span class="riski riski--3"></span></span></section>
+              <div class="pif2-choose-pif__item radios">
+                <div class="pif2-choose-pif__item__title radios">Валюта активов</div>
+                <div class="pif2-choose-pif__item__radios">
+                  <div>
+                    <label class="radio">
+                      <input class="jqTransformHidden" id="valuta1" type="radio" name="valuta" value="3m" checked><span></span>
+                    </label>
+                    <label for="valuta1">Рубль</label>
+                  </div>
+                  <div class="pif2-choose-pif__item__radios__item">
+                    <label class="radio">
+                      <input class="jqTransformHidden" id="valuta2" type="radio" name="valuta" value="3m"><span></span>
+                    </label>
+                    <label for="valuta2">Доллар США</label>
+                  </div>
                 </div>
-                <input type="hidden" value="3" name="form_dropdown_QUESTION_1" data-invest-value="4">
+              </div>
+              <div class="pif2-choose-pif__item">
+                <div class="pif2-choose-pif__item__title">Риск / Доход<i></i></div>
+                <div class="dropdown dropdown-std pif2-select-2">
+                  <div class="drop_face"><span class="selected">Низкий риск, умеренный доход<span class="riski riski--1"></span></span><span class="drop_arrow"></span></div>
+                  <div class="drop_layout">
+                    <section class="active" data-value="1" data-invest-value="0"><span>Низкий риск, умеренный доход<span class="riski riski--1"></span></span></section>
+                    <section data-value="2" data-invest-value="2"><span>Низкий риск, умеренный доход<span class="riski riski--2"></span></span></section>
+                    <section data-value="3" data-invest-value="3"><span>Низкий риск, умеренный доход<span class="riski riski--3"></span></span></section>
+                  </div>
+                  <input type="hidden" value="3" name="form_dropdown_QUESTION_1" data-invest-value="4">
+                </div>
               </div>
             </div>
-          </div>
-          <form class="pif2-choose-pif__block2">
-            <div class="pif2-choose-pif__block2__item">
-              <div class="pif2-choose-pif__block2__title">Сумма инвестиций</div><img src="img/img-range-1.jpg">
+            <div class="pif2-choose-pif__block2">
+              <div class="pif2-choose-pif__block2__item">
+                <div class="pif2-choose-pif__block2__title">Сумма инвестиций</div>
+                <input class="pif2-range1 pif2__range input-number" type="text" id="pif2-range1">
+                <div class="js-pif2-range1 pif2__range1"></div>
+              </div>
+              <div class="pif2-choose-pif__block2__item">
+                <div class="pif2-choose-pif__block2__title">Срок инвестиций</div>
+                <div class="flex wrapper-years">
+                  <div class="js-pif2-range2 pif2__range2"><span class="pif2__range2--1 active">1 год</span><span class="pif2__range2--2">2 года</span><span class="pif2__range2--3"></span><span class="pif2__range2--4"></span><span class="pif2__range2--5">5 лет</span></div>
+                  <div class="pif2-range2 pif2__range flex">
+                    <input class="input-number" type="text" id="pif2-range2"><span class="pif2-range2__text">года</span>
+                  </div>
+                </div>
+              </div>
+              <button class="pif2-choose-pif__block2__reset js-pif2-reset" type="reset">Сбросить настройки</button>
             </div>
-            <div class="pif2-choose-pif__block2__item">
-              <div class="pif2-choose-pif__block2__title">Срок инвестиций</div><img src="img/img-range-2.jpg">
-            </div>
-            <button class="pif2-choose-pif__block2__reset" type="reset">Сбросить настройки</button>
           </form>
           <div class="pif2__table">
             <div class="pif2__table__row pif2__table__row--name"><span class="pif2__table__row--1">Название фонда</span><span class="pif2__table__row--2">Риск</span><span class="pif2__table__row--3">Динамика за 2 года</span><span class="pif2__table__row--4">Результат за 2 года</span><span class="pif2__table__row--5"></span></div>

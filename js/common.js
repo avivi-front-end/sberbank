@@ -68,6 +68,67 @@ $(function () {
                $('.pif1-choose__btn').toggle();
            }
        });
+
+
+        var
+            range1 = 1740000,
+            range2 = 2;
+        $('.js-pif2-range1').slider({
+            step: 100,
+            min: 0,
+            max: 5000000,
+            value: range1,
+            slide: function( event, ui ) {
+                $('#pif2-range1').val( ui.value );
+            },
+            range: "min"
+        });
+
+        $( "#pif2-range1" ).val( $( ".js-pif2-range1" ).slider( "value" ) );
+
+        $('.js-pif2-range2').slider({
+            animate: "fast",
+            step: 1,
+            min: 1,
+            max: 6,
+            value: range2,
+            slide: function( event, ui ) {
+                $('#pif2-range2').val( ui.value );
+            },
+            range: "min",
+            change: function( event, ui ) {
+                if (ui.value == 1) {
+                    $('.pif2-range2__text').text('год')
+                } else {
+                    if (ui.value > 2) {
+                        $('.pif2__range2--2').addClass('active')
+                    } else {
+                        $('.pif2__range2--2').removeClass('active')
+                    }
+                    if (ui.value > 4) {
+                        $('.pif2-range2__text').text('лет');
+                        $('.pif2__range2--5').addClass('active');
+                    } else {
+                        $('.pif2-range2__text').text('года');
+                        $('.pif2__range2--5').removeClass('active');
+                    }
+                }
+            }
+        });
+
+        $( "#pif2-range2" ).val( $( ".js-pif2-range2" ).slider( "value" ) );
+
+        $('.input-number').on('keyup keypress', function(e) {
+            if (e.keyCode == 8 || e.keyCode == 46) {}
+            else
+            {
+                var letters='1234567890';
+                return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+            }
+        });
+
+
+
     });
 
     $(window).load(function () {

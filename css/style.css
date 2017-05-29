@@ -1,3 +1,4 @@
+@import url(jquery-ui.css);
 @font-face {
   font-family: 'ProximaNova';
   src: url("fonts/ProximaNova-Bold.eot");
@@ -2190,6 +2191,106 @@ The `sprites` mixin generates identical output to the CSS template
   .pif2__table2 .pif2__table__row--btn {
     margin-top: 51px; }
 
+.pif2__range {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background-color: #eff7f8;
+  border-radius: 5px;
+  outline: none;
+  padding: 12px 18px;
+  border: none;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #39424d; }
+
+.pif2__range1 {
+  position: relative;
+  z-index: 2;
+  height: 3px !important;
+  border: none !important; }
+  .pif2__range1 .ui-slider-handle {
+    position: relative;
+    border: none !important; }
+    .pif2__range1 .ui-slider-handle:after {
+      content: '';
+      position: absolute;
+      background: url("../img/pngsprite/ico-slide-handler.png") no-repeat center !important;
+      width: 31px;
+      height: 49px;
+      left: 0;
+      top: -9px; }
+  .pif2__range1 .ui-widget-header {
+    background: #0e9800; }
+
+.pif2__range2 {
+  position: relative;
+  margin-top: 28px;
+  background-color: #e4eced;
+  z-index: 2;
+  height: 3px !important;
+  border: none !important;
+  width: 75%; }
+  .pif2__range2 .ui-slider-handle {
+    position: relative;
+    border: none !important; }
+    .pif2__range2 .ui-slider-handle:after {
+      content: '';
+      position: absolute;
+      background: url("../img/pngsprite/ico-slide-handler.png") no-repeat center !important;
+      width: 33px;
+      height: 52px;
+      left: 0;
+      top: -13px; }
+  .pif2__range2 .ui-widget-header {
+    background: #0e9800; }
+  .pif2__range2 span {
+    position: absolute;
+    cursor: pointer;
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #bac2ca;
+    letter-spacing: -.6px;
+    top: 19px; }
+    .pif2__range2 span.active:before {
+      background: #0e9800; }
+    .pif2__range2 span:hover {
+      color: #8f979f; }
+    .pif2__range2 span:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 3px;
+      background-color: #e4eced;
+      top: -16px; }
+  .pif2__range2--1 {
+    left: 0; }
+    .pif2__range2--1:before {
+      left: 0; }
+  .pif2__range2--2 {
+    left: 17%; }
+    .pif2__range2--2:before {
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+  .pif2__range2--3 {
+    left: 37%; }
+    .pif2__range2--3:before {
+      display: none; }
+  .pif2__range2--4 {
+    left: 57%; }
+    .pif2__range2--4:before {
+      display: none; }
+  .pif2__range2--5 {
+    left: 78%; }
+    .pif2__range2--5:before {
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
 .pif2-select-1 {
   width: 250px; }
   .pif2-select-1 .drop_face {
@@ -2218,6 +2319,49 @@ The `sprites` mixin generates identical output to the CSS template
       background-color: #ffb515; }
     .pif2-select-2 .riski--3 {
       background-color: #eb4b4b; }
+
+.pif2-range2 {
+  position: relative;
+  width: 20%;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-align: end;
+  align-items: flex-end; }
+  .pif2-range2:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    border: 10px solid transparent;
+    border-right: 10px solid #eff7f8; }
+  .pif2-range2__text {
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 3px;
+    color: #39424d; }
+  .pif2-range2 input {
+    width: 24px;
+    height: 32px;
+    overflow: hidden;
+    line-height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #39424d; }
+
+.flex {
+  display: -ms-flexbox;
+  display: flex; }
+
+.wrapper-years {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .pif3 {
   padding-top: 61px; }
