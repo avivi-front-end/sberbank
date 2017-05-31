@@ -127,6 +127,19 @@ $(function () {
             }
         });
 
+        //////////
+        // ТАБЫ //
+        //////////
+
+        $('.pif-tab__item').click(function () {
+            $('.pif-tab__item').removeClass('active');
+            $(this).addClass('active');
+
+            var tabID = '#pif-tab-' + $(this).data('pif-tab');
+
+            $('.pif-tab__block').removeClass('active');
+            $(tabID).addClass('active');
+        });
 
 
     });

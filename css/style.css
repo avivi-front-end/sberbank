@@ -2209,9 +2209,11 @@ The `sprites` mixin generates identical output to the CSS template
 .pif2__range1 {
   position: relative;
   z-index: 2;
+  top: auto !important;
   height: 3px !important;
   border: none !important; }
   .pif2__range1 .ui-slider-handle {
+    top: -8px !important;
     position: relative;
     border: none !important; }
     .pif2__range1 .ui-slider-handle:after {
@@ -2226,6 +2228,7 @@ The `sprites` mixin generates identical output to the CSS template
     background: #0e9800; }
 
 .pif2__range2 {
+  top: auto !important;
   position: relative;
   margin-top: 28px;
   background-color: #e4eced;
@@ -2234,6 +2237,7 @@ The `sprites` mixin generates identical output to the CSS template
   border: none !important;
   width: 75%; }
   .pif2__range2 .ui-slider-handle {
+    top: -8px !important;
     position: relative;
     border: none !important; }
     .pif2__range2 .ui-slider-handle:after {
@@ -2339,7 +2343,8 @@ The `sprites` mixin generates identical output to the CSS template
     font-weight: 400;
     font-size: 18px;
     margin-left: 3px;
-    color: #39424d; }
+    color: #39424d;
+    line-height: 20px; }
   .pif2-range2 input {
     width: 24px;
     height: 32px;
@@ -2351,7 +2356,8 @@ The `sprites` mixin generates identical output to the CSS template
     font-family: "ProximaNova", sans-serif;
     font-weight: 400;
     font-size: 40px;
-    color: #39424d; }
+    color: #39424d;
+    padding: 0; }
 
 .flex {
   display: -ms-flexbox;
@@ -2362,6 +2368,9 @@ The `sprites` mixin generates identical output to the CSS template
   flex-direction: row;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+
+.pif2-choose-pif__item .dropdown {
+  margin: 0; }
 
 .pif3 {
   padding-top: 61px; }
@@ -2378,5 +2387,98 @@ The `sprites` mixin generates identical output to the CSS template
     .pif3__data-date span {
       font-weight: 700;
       text-decoration: underline; }
+
+.pif-tab {
+  margin-bottom: 80px;
+  background-color: #f2f3f6; }
+  .pif-tab__block {
+    display: none; }
+    .pif-tab__block.active {
+      display: block; }
+  .pif-tab__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center; }
+  .pif-tab__item {
+    position: relative;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center; }
+    .pif-tab__item.active:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      bottom: 0;
+      background-color: #f29a07;
+      width: 100%;
+      height: 3px;
+      opacity: 1;
+      transition: all 0.2s ease; }
+    .pif-tab__item:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      bottom: 0;
+      background-color: #f29a07;
+      width: 100%;
+      height: 3px;
+      opacity: 0;
+      transition: all 0.2s ease; }
+    .pif-tab__item:hover:before {
+      opacity: 1; }
+    .pif-tab__item:not(:last-of-type):after {
+      content: '';
+      position: absolute;
+      right: -65px;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background-color: #bec9cc;
+      width: 1px;
+      height: 54px; }
+  .pif-tab__ico {
+    display: inline-block;
+    margin-right: 11px; }
+    .pif-tab__ico--1 {
+      background: url("../img/pngsprite/pif-tab-1.png") no-repeat center;
+      width: 16px;
+      height: 19px; }
+    .pif-tab__ico--2 {
+      background: url("../img/pngsprite/pif-tab-2.png") no-repeat center;
+      width: 20px;
+      height: 20px; }
+    .pif-tab__ico--3 {
+      background: url("../img/pngsprite/pif-tab-3.png") no-repeat center;
+      width: 20px;
+      height: 20px; }
+    .pif-tab__ico--4 {
+      background: url("../img/pngsprite/pif-tab-4.png") no-repeat center;
+      width: 20px;
+      height: 19px; }
+  .pif-tab__text {
+    position: relative;
+    display: inline-block;
+    font-family: "ProximaNova", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+    color: #606366;
+    padding: 24px 0; }
 
 /*# sourceMappingURL=style.css.map */

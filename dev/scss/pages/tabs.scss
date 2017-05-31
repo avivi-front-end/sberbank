@@ -1,0 +1,107 @@
+//СТИЛИ ТАБОВ
+
+
+.pif-tab {
+  margin-bottom: 80px;
+  background-color: #f2f3f6;
+  &__block {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &.active {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        background-color: #f29a07;
+        width: 100%;
+        height: 3px;
+        opacity: 1;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      background-color: #f29a07;
+      width: 100%;
+      height: 3px;
+      opacity: 0;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:not(:last-of-type) {
+      &:after {
+        content: '';
+        position: absolute;
+        right: -65px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #bec9cc;
+        width: 1px;
+        height: 54px;
+      }
+    }
+  }
+  &__ico {
+    display: inline-block;
+    margin-right: 11px;
+    &--1 {
+      background: url("../img/pngsprite/pif-tab-1.png") no-repeat center;
+      width: 16px;
+      height: 19px;
+    }
+    &--2 {
+      background: url("../img/pngsprite/pif-tab-2.png") no-repeat center;
+      width: 20px;
+      height: 20px;
+    }
+    &--3{
+      background: url("../img/pngsprite/pif-tab-3.png") no-repeat center;
+      width: 20px;
+      height: 20px;
+    }
+    &--4 {
+      background: url("../img/pngsprite/pif-tab-4.png") no-repeat center;
+      width: 20px;
+      height: 19px;
+    }
+  }
+  &__text {
+    position: relative;
+    display: inline-block;
+    font-family: "ProximaNova", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+    color: #606366;
+    padding: 24px 0;
+  }
+}

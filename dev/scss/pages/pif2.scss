@@ -334,9 +334,11 @@
   &__range1 {
     position: relative;
     z-index: 2;
+    top: auto!important;
     height: 3px!important;
     border: none!important;
     .ui-slider-handle {
+      top: -8px!important;
       position: relative;
       border: none!important;
       &:after {
@@ -354,6 +356,7 @@
     }
   }
   &__range2 {
+    top: auto!important;
     position: relative;
     margin-top: 28px;
     background-color: #e4eced;
@@ -362,6 +365,7 @@
     border: none!important;
     width: 75%;
     .ui-slider-handle {
+      top: -8px!important;
       position: relative;
       border: none!important;
       &:after {
@@ -496,7 +500,7 @@
     font-size: 18px;
     margin-left: 3px;
     color: #39424d;
-
+    line-height: 20px;
   }
   input {
     width: 24px;
@@ -510,6 +514,7 @@
     font-weight: 400;
     font-size: 40px;
     color: #39424d;
+    padding: 0;
   }
 }
 .flex {
@@ -518,5 +523,8 @@
 .wrapper-years {
   flex-direction: row;
   justify-content: space-between;
+}
+.pif2-choose-pif__item .dropdown {
+  margin: 0;
 }
 
